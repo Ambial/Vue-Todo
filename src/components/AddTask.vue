@@ -44,7 +44,7 @@ export default {
     onSubmit() {
       if (this.text && this.day) {
         let newTask = {
-          id: Math.floor(Math.random() * 100),
+          //id added by json-server
           text: this.text,
           day: this.day,
           reminder: this.reminder,
