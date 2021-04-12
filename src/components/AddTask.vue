@@ -49,9 +49,6 @@ export default {
           day: this.day,
           reminder: this.reminder,
         };
-
-        console.log(JSON.stringify(newTask));
-
         this.$emit("task-created", newTask);
         this.resetForm();
       } else {

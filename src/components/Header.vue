@@ -2,6 +2,7 @@
   <header>
     <h1>{{ title }}</h1>
     <Button
+      v-if="isHomePage"
       @btn-click="$emit('btn-click')"
       :color="showAddTask ? 'red' : 'green'"
       :text="showAddTask ? 'Hide' : 'Add'"
@@ -26,6 +27,15 @@ export default {
   },
   components: {
     Button,
+  },
+  computed: {
+    isHomePage() {
+      if (this.$route.path === "/") {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   emits: ["btn-click"],
 };
